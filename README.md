@@ -1,3 +1,4 @@
+[![Lint | Build | Deploy to Production](https://github.com/navincodesalot/t3-login/actions/workflows/production_deployment.yml/badge.svg?branch=main)](https://github.com/navincodesalot/t3-login/actions/workflows/production_deployment.yml)
 # Create T3 App
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
