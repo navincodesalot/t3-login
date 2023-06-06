@@ -1,7 +1,6 @@
 export const metadata = {
   title: "Protected Page",
-  description: "Login system using T3",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  description: "Login system using T3"
 };
 
 export default function ProtectedLayout({

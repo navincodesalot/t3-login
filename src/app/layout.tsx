@@ -1,8 +1,8 @@
-import "~/styles/globals.css";
+import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 import { ClerkProvider, UserButton, SignedIn, SignedOut, SignOutButton, SignInButton, SignUpButton } from '@clerk/nextjs'
-// import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata = {
   title: "T3 Login",
   description: "Login system using T3",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [{ rel: "favicon", url: "/61457.png" }]
 };
 
 export default function RootLayout({
@@ -23,23 +23,32 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={twMerge("bg-background font-sans text-foreground", inter.variable)}>
-          <SignedIn>
-            <UserButton/>
-            <SignOutButton>
-              {/* <Button>Sign Up</Button> */}
-            </SignOutButton>
-          </SignedIn>
+        <body className={twMerge("bg-background font-sans text-foreground", inter.variable, "bg-white")}>
+          <div className="">
+          <header style={{ display: "flex", justifyContent: "space-between", padding: 20 }}>
+      
+            <SignedIn>
+              <div className="flex justify-end ml-auto">
+              <UserButton/>
+              </div>
+            </SignedIn>
+            
+            <SignedOut>
+              <SignInButton>
+                <div className="absolute right-[9.5rem]">
+                  <Button size="lg" variant="ghost">Login</Button>
+                </div>
+              </SignInButton>         
 
-          <SignedOut>
-            <SignInButton>
-              {/* <Button>Login</Button> */}
-            </SignInButton>
-
-            <SignUpButton>
-              {/* <Button>Sign Up</Button> */}
-            </SignUpButton>
-          </SignedOut>
+              <SignUpButton>
+                <div className="flex justify-end ml-auto">
+                  <Button size="lg">Sign Up</Button>
+                </div>
+              </SignUpButton>
+              
+            </SignedOut>
+            </header>
+          </div>
           {children}
         </body>
       </html>
