@@ -1,8 +1,10 @@
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 import { twMerge } from "tailwind-merge";
-import { ClerkProvider, UserButton, SignedIn, SignedOut, SignOutButton, SignInButton, SignUpButton } from '@clerk/nextjs'
-import { Button } from "@/components/ui/button";
+import { ClerkProvider } from '@clerk/nextjs'
+import { Suspense } from 'react';
+import { Navbar } from "@/components/navbar";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,31 +26,13 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={twMerge("bg-background font-sans text-foreground", inter.variable, "bg-white")}>
-          <div className="">
           <header style={{ display: "flex", justifyContent: "space-between", padding: 20 }}>
-      
-            <SignedIn>
-              <div className="flex justify-end ml-auto">
-              <UserButton/>
-              </div>
-            </SignedIn>
-            
-            <SignedOut>
-              <SignInButton>
-                <div className="absolute right-[9.5rem]">
-                  <Button size="lg" variant="ghost">Login</Button>
-                </div>
-              </SignInButton>         
+            <div className="flex justify-end ml-auto">
 
-              <SignUpButton>
-                <div className="flex justify-end ml-auto">
-                  <Button size="lg">Sign Up</Button>
-                </div>
-              </SignUpButton>
-              
-            </SignedOut>
-            </header>
-          </div>
+                <Navbar/>
+
+            </div>
+          </header>
           {children}
         </body>
       </html>
