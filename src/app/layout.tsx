@@ -28,9 +28,7 @@ export default function RootLayout({
         <body className={twMerge("bg-background font-sans text-foreground", inter.variable, "bg-white")}>
           <header style={{ display: "flex", justifyContent: "space-between", padding: 20 }}>
             <div className="flex justify-end ml-auto">
-
                 <Navbar/>
-
             </div>
           </header>
           {children}

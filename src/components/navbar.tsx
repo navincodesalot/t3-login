@@ -12,19 +12,26 @@ export function Navbar() {
                     <NavigationMenuItem>
                     <SignedIn>
                         <div className="flex justify-end ml-auto">
-                            <UserButton/>
+                            <UserButton afterSignOutUrl="/" appearance={{
+                                elements: {
+                                userButtonAvatarBox: {
+                                    height: "3rem",
+                                    width: "3rem"
+                                }
+                                }
+                            }} />
                         </div>
                     </SignedIn>
                     <SignedOut>
                         <SignInButton>
                             <div className="absolute right-[8rem]">
-                            <Button size="lg" variant="ghost">Login</Button>
+                            <Button size="xlg" variant="ghost">Login</Button>
                             </div>
                         </SignInButton>         
 
                         <SignUpButton>
                             <div className="flex justify-end ml-auto">
-                            <Button size="lg">Sign Up</Button>
+                            <Button size="xlg">Sign Up</Button>
                             </div>
                         </SignUpButton>
                     </SignedOut>
