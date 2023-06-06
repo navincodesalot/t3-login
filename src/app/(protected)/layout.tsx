@@ -10,10 +10,8 @@ export default function ProtectedLayout({
   children: React.ReactNode;
 }) {
   return (
-      <html lang="en">
-        <body className="bg-white">
-          {children}
-        </body>
-      </html>
+    <div className="bg-white">
+      {children}
+    </div>
   );
 }

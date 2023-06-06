@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={twMerge("bg-background font-sans text-foreground", inter.variable,)}>
+        <body className={twMerge("bg-background font-sans text-foreground", inter.variable)}>
           <SignedIn>
             <UserButton/>
             <SignOutButton>
