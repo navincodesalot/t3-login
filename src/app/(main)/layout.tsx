@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/navbar";
 
 export const metadata = {
-  title: "Protected Page",
+  title: "T3 Login",
   description: "Login system using T3"
 };
 

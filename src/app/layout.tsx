@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 import { ClerkProvider } from '@clerk/nextjs'
-import { Navbar } from "@/components/navbar";
 
 const inter = Inter({
   subsets: ["latin"],
