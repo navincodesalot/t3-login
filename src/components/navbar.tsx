@@ -3,7 +3,8 @@ import * as React from "react"
 import { SignedIn, SignedOut, SignInButton, SignUpButton } from '@clerk/nextjs'
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu"
 import  UserButton from "@/components/user-button"
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
+import SignInAndSignUp from "@/components/signin-and-signup"
 
 export function Navbar() {
     return (
@@ -17,7 +18,7 @@ export function Navbar() {
                         </div>
                     </SignedIn>
                     <SignedOut>
-                        <SignInButton>
+                        {/* <SignInButton>
                             <div className="absolute right-[8rem]">
                                 <Button size="xlg" variant="ghost">Login</Button>
                             </div>
@@ -27,7 +28,8 @@ export function Navbar() {
                             <div className="flex justify-end ml-auto">
                             <Button size="xlg">Sign Up</Button>
                             </div>
-                        </SignUpButton>
+                        </SignUpButton> */}
+                        <SignInAndSignUp/>
                     </SignedOut>
                     </NavigationMenuItem>
                 </NavigationMenuList>
